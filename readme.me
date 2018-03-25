@@ -1,4 +1,7 @@
-To run this application you need to:
+How to run?
+
+Linux
+=====
 
 1. Install OpenCV on your linux machine.
 
@@ -11,4 +14,20 @@ g++ fingershooter.cpp -o fingershooter `pkg-config --cflags --libs opencv`
 	./fingershooter fingermovie.mov
 
 
+Mac OS
+======
 
+Install HomeBrew on Mam
+
+
+Then run the following on terminal:
+
+$ brew install opencv
+
+$ brew install pkg-config
+
+$ g++ $(pkg-config --cflags --libs opencv) fingershooter.cpp -o Game
+
+$ ./Game 0
+
+where 0 is the camera address
