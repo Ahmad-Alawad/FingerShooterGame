@@ -22,9 +22,15 @@ Install HomeBrew on Mam
 
 Then run the following on terminal:
 
-$ brew install opencv
+$ brew install opencv@2
 
 $ brew install pkg-config
+
+$ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
+
+$ ln -s /usr/local/Cellar/opencv@2/2.4.13.7_7/lib/pkgconfig/opencv.pc $PKG_CONFIG_PATH
+
+$ pkg-config --cflags --libs /usr/local/Cellar/opencv@2/2.4.13.7_7/lib/pkgconfig/opencv.pc
 
 $ g++ $(pkg-config --cflags --libs opencv) fingershooter.cpp -o Game
 
